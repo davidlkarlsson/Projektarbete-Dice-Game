@@ -21,7 +21,7 @@ public class Utils {
         }
     }
 
-    //METOD FÖR ATT KASTA TÄRNING OCH SEDAN SPARA DATAN I PLAYERSCORE I MAIN-METODEN
+    //METOD FÖR ATT KASTA TÄRNING OCH SEDAN SPARA DATAN I PLAYERSCORE SOM KALLAS PÅ I MAIN-METODEN
 
     public int rollDice(String playerName) {
 

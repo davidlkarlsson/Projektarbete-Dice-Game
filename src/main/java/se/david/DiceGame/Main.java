@@ -41,6 +41,8 @@ public class Main {
 
             utils.delay();
 
+            //HÄMTAR RESULTATET FRÅN GETPLAYERSCORE() OCH SKRIVER UT DET.
+
             System.out.println("Your result: " + player1.getPlayerScore());
 
             utils.delay();
@@ -53,12 +55,16 @@ public class Main {
 
             utils.delay();
 
+            //KONTROLLERAR VEM SOM HAR VUNNIT SPELET
+
             if (player1.getPlayerScore() > player2.getPlayerScore()) {
 
                 System.out.println("+++++" + player1.getPlayerName() + " wins!+++++");
             } else {
                 System.out.println("+++++" + player2.getPlayerName() + " wins!+++++");
             }
+
+            //KONTROLLERAR OM DU VILL SPELA IGEN
 
             while (true) {
 
