@@ -3,18 +3,28 @@ package se.david.DiceGame;
 import java.util.Scanner;
 
 public class Main {
+
+    static Scanner scanner = new Scanner(System.in);
+    static Utils utils = new Utils();
+
+
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Utils utils = new Utils();
+
+        //SÄTTER/RESETAR UNDERLINE + EN BALLONG TILL VINNAREN
+
+        String underline = "\u001B[4m";
+        String reset = "\u001B[0m";
+        String balloon = "\uD83C\uDF88";
+
 
         //EN WHILE-LOOP FÖR ATT KUNNA SPELA IGEN
         while (true) {
 
             //INTRODUKTION TILL SPELET
 
-            System.out.println("++++++++Welcome to the Dice Game++++++++\n");
+            utils.printWelcome();
 
-            utils.delay();
 
             //INPUT AV SPELARNAMN
 
@@ -43,7 +53,7 @@ public class Main {
 
             //HÄMTAR RESULTATET FRÅN GETPLAYERSCORE() OCH SKRIVER UT DET.
 
-            System.out.println("Your result: " + player1.getPlayerScore());
+            System.out.println(underline + "Your result: " + player1.getPlayerScore() + " points" + reset);
 
             utils.delay();
 
@@ -51,24 +61,32 @@ public class Main {
 
             utils.delay();
 
-            System.out.println("Your result: " + player2.getPlayerScore());
+            System.out.println(underline + "Your result: " + player2.getPlayerScore() + " points\n" + reset);
 
             utils.delay();
 
             //KONTROLLERAR VEM SOM HAR VUNNIT SPELET
 
+            System.out.println(underline + "+++++Game result:+++++" + reset);
+
+            System.out.println(player1.getPlayerName() + ": " + player1.getPlayerScore() + " points");
+
+            System.out.println(player2.getPlayerName() + ": " + player2.getPlayerScore() + " points\n");
+
             if (player1.getPlayerScore() > player2.getPlayerScore()) {
 
-                System.out.println("+++++" + player1.getPlayerName() + " wins!+++++");
+                System.out.println("+++++" + balloon + player1.getPlayerName() + " wins!" + balloon + "+++++");
             } else {
-                System.out.println("+++++" + player2.getPlayerName() + " wins!+++++");
+                System.out.println("+++++" + balloon + player2.getPlayerName() + " wins!" + balloon + "+++++");
             }
+
+            utils.delay();
 
             //KONTROLLERAR OM DU VILL SPELA IGEN
 
             while (true) {
 
-                System.out.println("Do you want to play again? (y/n)");
+                System.out.print("\nDo you want to play again? (y/n)");
                 String answer = scanner.nextLine().toLowerCase();
                 if (answer.equals("y")) {
                     break;

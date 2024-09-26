@@ -10,6 +10,13 @@ public class Utils {
 
     Scanner scanner = new Scanner(System.in);
 
+    //METOD FÖR ATT SKRIVA UT VÄLKOMSTMEDDELANDE
+
+    public void printWelcome() {
+        System.out.println("\n++++++++Welcome to the Dice Game++++++++\n");
+        delay();
+    }
+
     //METOD FÖR ATT SKAPA FÖRDRÖJNING I OUTPUT.
 
     public void delay() {
@@ -31,7 +38,9 @@ public class Utils {
 
         int roll1 = random.nextInt(6) + 1;
 
-        System.out.println("Your first roll was a " + roll1 + ".");
+        delay();
+
+        System.out.println("Your first roll was a " + roll1 + ".\n");
 
         System.out.println("*****PRESS ENTER TO ROLL YOUR SECOND DICE*****");
 
@@ -39,7 +48,9 @@ public class Utils {
 
         int roll2 = random.nextInt(6) + 1;
 
-        System.out.println("and your second roll was a " + roll2 + ".\n");
+        delay();
+
+        System.out.println("Your second roll was a " + roll2 + ".\n");
 
         int sum = roll1 + roll2;
         return sum;

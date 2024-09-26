@@ -1,5 +1,7 @@
 package se.david.DiceGame;
 
+import java.util.Scanner;
+
 public class Players {
 
     //ATTRIBUT
@@ -35,6 +37,9 @@ public class Players {
 
 
 }
+
+
+
 
 
 
