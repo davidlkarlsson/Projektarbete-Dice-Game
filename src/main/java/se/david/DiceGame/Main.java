@@ -86,10 +86,11 @@ public class Main {
 
             while (true) {
 
-                System.out.print("\nDo you want to play again? (y/n)");
+                System.out.print("\nDo you want to play again? (y/n) ");
                 String answer = scanner.nextLine().toLowerCase();
                 if (answer.equals("y")) {
-                    break;
+                    break
+                            ;
 
 
                 } else if (answer.equals("n")) {
