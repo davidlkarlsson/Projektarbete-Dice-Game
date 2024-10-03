@@ -76,13 +76,11 @@ public class Main {
 
                 System.out.println("+++++" + balloon + player1.getPlayerName() + " wins!" + balloon + "+++++");
             }
-            else if (player1.getPlayerScore() == player2.getPlayerScore()) {
-
-                System.out.println("+++++IT'S A TIE!+++++");
-
+            else if (player2.getPlayerScore() > player1.getPlayerScore()) {
+                System.out.println("+++++" + balloon + player2.getPlayerName() + " wins!" + balloon + "+++++");
             }
             else {
-                System.out.println("+++++" + balloon + player2.getPlayerName() + " wins!" + balloon + "+++++");
+                System.out.println("+++++IT'S A TIE!+++++");
             }
 
             utils.delay();
