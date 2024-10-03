@@ -8,7 +8,6 @@ public class Main {
     static Utils utils = new Utils();
 
 
-
     public static void main(String[] args) {
 
         //SÄTTER/RESETAR UNDERLINE + EN BALLONG TILL VINNAREN
@@ -76,7 +75,13 @@ public class Main {
             if (player1.getPlayerScore() > player2.getPlayerScore()) {
 
                 System.out.println("+++++" + balloon + player1.getPlayerName() + " wins!" + balloon + "+++++");
-            } else {
+            }
+            else if (player1.getPlayerScore() == player2.getPlayerScore()) {
+
+                System.out.println("+++++IT'S A TIE!+++++");
+
+            }
+            else {
                 System.out.println("+++++" + balloon + player2.getPlayerName() + " wins!" + balloon + "+++++");
             }
 
@@ -89,14 +94,15 @@ public class Main {
                 System.out.print("\nDo you want to play again? (y/n) ");
                 String answer = scanner.nextLine().toLowerCase();
                 if (answer.equals("y")) {
-                    break
-                            ;
+                    break;
 
 
                 } else if (answer.equals("n")) {
 
                     System.out.println("Thanks for playing!");
+                    scanner.close();
                     System.exit(0);
+
                 } else {
                     System.out.println("Invalid answer. Try again.");
 
